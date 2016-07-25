@@ -1,0 +1,39 @@
+https://api.spotify.com/v1/search
+
+
+
+https://api.spotify.com/v1/search?q=david&type=artist
+
+**********************************************************************
+
+&fq=news_desk:("Sports") AND glocations:("NEW YORK CITY")
+
+
+*******************************************************
+
+Application name 	student use
+API key 	f120ff5870474c31b7e21fc330674c18
+Shared secret 	f5f4a0fdffdd893460aea34edab5f974
+
+
+
+********************************************
+
+5gigs api
+
+
+b46901592ed955b788f1add3059f5e1b
+
+
+
+5VvWf7VFjGgXSwmx
+
+
+jambase
+
+bhvzysktq9372f8ggm8dydkp
+
+
+
+Jambase API
+n254tmc95fcyzje7k4m5m8jm

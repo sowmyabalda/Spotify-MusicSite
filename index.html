@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Spotify-Sowmya</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#myPage">Sowmya Balda</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myPage">HOME</a></li>
+        <li><a href="#band">ABOUT ME</a></li>
+        <li><a href="#tour1">MY WORK</a></li>
+        <li><a href="#events">EVENTS</a></li>
+        <li><a href="#contact">CONTACT ME</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox" >
+      <div class="item active">
+        <img src="images/taylor.jpg" alt="New York" width="1000" height="500">
+        <div class="carousel-caption">
+          <h3>Taylor Swift</h3>
+          <p style=""> Music that you Love to Listen.</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="images/david.jpg" alt="Chicago" width="1000" height="500">
+        <div class="carousel-caption">
+          <h3>David Gutta</h3>
+          <p>Come.. Enjoy my Music..!!</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="images/rihanna.jpg" alt="Chicago" width="1000" height="700">
+        <div class="carousel-caption">
+          <h3>Rihanna</h3>
+          <p>Rihannaa.. Work Work Workkkk..!!</p>
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="images/shawn.jpg" alt="Los Angeles" width="1000" height="500">
+        <div class="carousel-caption">
+          <h3>Shawn Mendes</h3>
+          <p>Music is Shawn..</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!-- Container (The Band Section) -->
+<div id="band" class="container text-center">
+  <h1>ABOUT ME</h1>
+  <p><em>Best Hobby, OfCourse Listening Music!</em></p>
+  <h2>Hi Friends, Sowmya here, I want to be popular by helping the fans of few famous artists in searching their music !</h2>
+  <br>
+</div>
+
+<!-- Container (TOUR Section) -->
+<div id="tour1" class="bg-1">
+  <!-- <div class="container"> -->
+    <h3 class="text-center">Music ! Artists ! Band !</h3>
+    <p class="text-center">Looking for Favorite Music, Browse your favorites here..</p>
+
+    
+    <div class="row text-center">
+       <span class="glyphicon glyphicon-music" aria-hidden="true"></span> <button id="spotify" class="btn btn-success">Listen Spotify</button>
+    </div>
+    <br>
+      <div class="row text-center">
+    <button type="button" class="btn btn-primary" id="taylorBtn">Taylor Swift</button>
+    <button type="button" class="btn btn-primary" id="shawnBtn">Shawn Mendes</button>
+    <button type="button" class="btn btn-primary" id="drakeBtn"> Drake</button>
+    <button type="button" class="btn btn-primary" id="rihannaBtn"> Rihanna </button>
+   </div>
+      <div class="container" id="taylor"> </div>
+      <div class="container" id="shawn"></div>
+      <div class="container" id="drake"></div>
+      <div class="container" id="rihanna"></div>
+</div>
+
+<div id="events" class="container text-center">
+<h2>Pick Events You Wish As Per The ZipCode</h2>
+<input type="text" id=searchTerm>
+      <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal" id="newButton">Book Now</button>
+    <div id="bookedEvents" class="row text-center"></div>
+    </div>
+
+     <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Hurry!!! Book Event.</h4>
+          </div>
+          <div class="modal-body" id="modal-body">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="saveArticle">Save</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    
+    
+    
+<!-- Container (Contact Section) -->
+<div id="contact" class="container text-center">
+  <h3 class="text-center">Contact Me </h3>
+  <p class="text-center"><em>Drop your Comments..</em></p>
+
+  <div class="row">
+    <div class="col-md-4">
+      
+      <p><span class="glyphicon glyphicon-map-marker"></span>Maryland, US</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phone: +1 216-333-9794</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: sowmyabalda@gmail.com</p>
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+      <br>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right" type="submit">Post</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  
+</div>
+     <footer class="text-center">
+        <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="" data-original-title="TO TOP">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a><br><br>
+        <p>Sowmya Blog<a href="" data-toggle="tooltip" title="" data-original-title="Visit sowmya blog"> Contact me: sowmyabalda@gmail.com</a></p>
+    </footer>
+
+
+<script type="text/javascript">
+        vph = $(window).height();
+        $('.container').height(vph);
+</script>
+
+          <script type="text/javascript" src="animate.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+      <script type="text/javascript" src="database.js"></script>
+
+</body>
+</html>
+
